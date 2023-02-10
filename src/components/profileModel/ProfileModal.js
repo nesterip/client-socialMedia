@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Modal,useMantineTheme} from '@mantine/core';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { uploadImage } from '../../actions/UploadAction.js';
 import { updateUser } from '../../actions/UserAction.js';
@@ -39,7 +39,7 @@ function ProfileModal({modalOpened, setModelOpened, data}) {
         
         //subiendo imagen de perfil
         if(profileImg){
-            const data = new FormData;
+            const data = new FormData();
             const filename = Date.now() + profileImg.name;
             data.append("name", filename);
             data.append("file", profileImg);
@@ -53,7 +53,7 @@ function ProfileModal({modalOpened, setModelOpened, data}) {
 
         //subiendo imagen de cover
         if(coverImg){
-            const data = new FormData;
+            const data = new FormData();
             const filename = Date.now() + coverImg.name;
             data.append("name", filename);
             data.append("file", coverImg);
