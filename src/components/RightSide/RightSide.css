@@ -1,0 +1,34 @@
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navIcons{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+}
+
+.navIcons>img{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.navIcons>a>img{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.navIcons>svg{
+    cursor: pointer;
+}
+
+.t-s-btn{
+    height: 3rem;
+    width: 80%;
+    align-self: center;
+    margin-top: -1rem;
+}

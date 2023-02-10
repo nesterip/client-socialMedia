@@ -1,0 +1,28 @@
+.userToChat-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: auto;
+    min-height: 80vh;
+}
+
+.userToChat-body{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.userToChat-header>:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+
+.toChatName>span{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+

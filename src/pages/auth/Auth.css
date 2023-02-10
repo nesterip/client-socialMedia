@@ -1,0 +1,116 @@
+.auth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+    position: relative;
+}
+
+.auth>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-left{
+    gap: 2rem;
+}
+
+.a-left>img{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.infoForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.authInput{
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    background-color: var(--inputColor);
+    padding: 20px;
+    flex: 1;
+}
+
+.infoForm>div{
+    display: flex;
+    width: 90%;
+    gap: 1rem;
+    height: 2rem;
+}
+
+.authForm>:first-child{
+margin-top: .3rem;
+}
+
+.authForm>:last-child>span{
+    display: flex;
+    align-items: flex-end;
+    font-style: oblique;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.authForm{
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.authForm>div{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnSubmit{
+    align-self: flex-end;
+    margin-top: 0;
+}
+
+.confirmPass{
+    color: crimson;
+    font-size: 0.8rem;
+    align-self: flex-end;
+}
+
+
+
+/* -------------background letter-------- */
+.webName>h1{
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    background-color: red;
+    
+    /* aplicando el gradient al objeto */
+    background-image: var(--buttonBg);
+
+    /* aplicando 1er paso del gradient a las letras */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* 2do paso poniendo las letras como mascara */
+    
+    /* Chrome */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* mozilla */
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.webName>h6{
+    font-size: 0.85rem;
+    margin-top: .5rem;
+}
+
+

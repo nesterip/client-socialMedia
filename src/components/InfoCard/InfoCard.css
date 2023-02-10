@@ -1,0 +1,33 @@
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: .5rem;
+    width: 90%;
+}
+
+.infoHead{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.infoHead>svg:hover{
+    color: #f95f35;
+    cursor: pointer;
+}
+
+.i-out-btn{
+    width: 7.6rem;
+    height: 2.4rem;
+    margin-top: 6rem;
+    align-self: flex-end;
+}
+
+.info{
+    display: flex;
+    gap: .5rem;
+}

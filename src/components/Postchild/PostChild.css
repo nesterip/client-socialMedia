@@ -1,0 +1,46 @@
+.postChild{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.postChild>img{
+    width: 100%;
+    max-height: 22rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+
+.postReact{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.postReact>img{
+    cursor: pointer;
+}
+
+.postDetail{
+    display: flex;
+    gap: .5rem;
+}
+
+.postChild> span:nth-of-type(1){
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.postChild> svg:nth-of-type(1){
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    right: 1rem;
+    bottom: 5.7rem;
+    cursor: pointer;
+}

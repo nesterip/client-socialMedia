@@ -1,0 +1,95 @@
+.followersCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    text-align: center;
+    gap: 1rem;
+}
+
+.followerr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follower-top{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.followerImg{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.followerName{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.followerName>:last-child{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.followerName>:first-child{
+    font-weight: bold;
+}
+
+.follow_btn{
+    width: 6rem;
+    height: 2rem;
+    font-weight: normal;
+    font-size: .9rem;
+    padding: 0.4rem 1.3rem;
+    background: var(--buttonBg);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    transition: all .1s ease-out;
+}
+
+.follow_btn:hover{
+    border: 2px solid orange;
+    color: orange;
+    background: transparent;
+    cursor: pointer;
+}
+
+.unFollow_btn{
+    width: 6rem;
+    height: 2rem;
+    border: 2px solid orange;
+    font-weight: normal;
+    font-size: .8rem;
+    padding: 0.4rem .9rem;
+    color: orange;
+    background: transparent;
+    
+    border-radius: 9px;
+    transition: all .1s ease-out;
+}
+
+.unFollow_btn:hover{
+    background: var(--buttonBg);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.followersCard>span{
+    color: orange;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.followersCard>span:hover{
+    color: rgb(247, 136, 0);
+    display: contents;
+}
