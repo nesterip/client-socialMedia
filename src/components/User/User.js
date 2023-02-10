@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { followUser, unFollowUser } from '../../actions/UserAction.js';
 
 const User = ({person}) => {
+    
     //Ruta de las imagenes locales por defecto
     const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
 
