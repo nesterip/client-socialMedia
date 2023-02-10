@@ -22,6 +22,7 @@ const Post = () => {
     //Solicitando todos los posts a renderizar
     useEffect(() => {
         dispatch(getTimeLinePosts(user._id));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //si no hay post renderiza esto

@@ -27,9 +27,9 @@ const ChatBox = ({chat, currentUserId, setSendMessage, recieveMessage, removeCha
         //si hay algun mesage del server socket y ademas si pertenese a
         //este chat, entonces lo añadimos a los messages
         if(recieveMessage !== null && recieveMessage.chatId === chat._id){
-            setMessages([...messages, recieveMessage]);
+            setMessages((prev) => [...prev, recieveMessage]);
         }
-    },[recieveMessage]);
+    },[recieveMessage, chat]);
 
     //obteniendo la data del not currentUser
     useEffect(()=>{
@@ -44,7 +44,7 @@ const ChatBox = ({chat, currentUserId, setSendMessage, recieveMessage, removeCha
             } 
         }
         if(chat !== null) getUserData();
-    },[chat]);
+    },[chat, currentUserId]);
 
     //Obteniendo los message entre esos dos users
     useEffect(() => {

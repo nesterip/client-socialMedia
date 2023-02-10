@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './FollowersCard.css';
-import { Followers } from '../../Data/FollowersData';
 import User from '../User/User';
 import {useSelector} from 'react-redux';
 import { getAllUsers } from '../../api/UserRequest.js';
@@ -18,9 +17,12 @@ const FollowersCar = () => {
         const fetchPersons = async() => {
             const {data} = await getAllUsers();
             setPersons(data);
+            //filtrando al currentUser
+            setPersons((prev) => prev.filter((elem) => elem._id !== user._id ));
         }
 
         fetchPersons();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -29,11 +31,9 @@ const FollowersCar = () => {
             
             {persons.map((person, id) => {
                 //para que no renderice el current user
-                if(person._id !== user._id){
                     return(
                         <User person={person} key={id}/>
                     )
-                }
             })}
 
             <span>Ver mas</span>
