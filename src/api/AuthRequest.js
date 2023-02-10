@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const PORT = process.env.PORT || "http://localhost:5000";
+const PORT = process.env.PORT || 'https://server-socialmedia-production-a709.up.railway.app/';
 //conectando con la api mediante axios
 const API = axios.create({baseURL: PORT});
 
