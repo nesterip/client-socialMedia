@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './Auth.css';
 import Logo from '../../img/logo.png';
 import {useDispatch, useSelector} from 'react-redux';

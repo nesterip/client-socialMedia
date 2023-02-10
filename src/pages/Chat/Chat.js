@@ -83,6 +83,7 @@ const Chat = () => {
             }
         }
         getChats();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     //Obteniendo el status del not currentUser

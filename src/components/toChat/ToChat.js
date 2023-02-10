@@ -24,6 +24,7 @@ const ToChat = ({user, addNewChat, setCurrentChat}) => {
             
         }
         getDataUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     const handleWrite = async() => {

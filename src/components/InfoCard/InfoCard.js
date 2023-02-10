@@ -40,7 +40,7 @@ const InfoCard = () => {
             }
         }
         fetchProfileUser();
-    }, [user]);
+    }, [user, profileUserId]);
 
     //Cerando sesion
     const handleLogOut = () => {

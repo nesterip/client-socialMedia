@@ -19,6 +19,7 @@ const Conversation = ({data, currentUserId, online}) => {
             } 
         }
         getUserData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
 

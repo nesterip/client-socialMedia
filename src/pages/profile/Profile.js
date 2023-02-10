@@ -1,5 +1,4 @@
 import React from 'react';
-import PostShare from '../../components/PostShare/PostShare';
 import PostSide from '../../components/PostSide/PostSide';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileLeft from '../../components/ProfileLeft/ProfileLeft';
