@@ -1,8 +1,7 @@
 import axios from "axios";
 
-const PORT = process.env.PORT || "http://localhost:5000";
 //conectando con la api mediante axios
-const API = axios.create({baseURL: PORT});
+const API = axios.create({baseURL: process.env.PORT});
 
 //aqui estamos enviando la data del token al authMiddleWare del server
 API.interceptors.request.use((req) => {

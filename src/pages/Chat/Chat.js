@@ -40,9 +40,9 @@ const Chat = () => {
     //Agregando al currentUser a los active user el socket
     //y obteniendo todos los active user del socket
     useEffect(() => {
-        const PORT_SOCKET = process.env.PORT_SOCKET || "http://localhost:8800";
+        
         //conectamos mediante el endpoint del server socket
-        socket.current= io(PORT_SOCKET);
+        socket.current= io(process.env.PORT_SOCKET);
 
         //enviando la accion a realizar y el userId
         //esto seria como axios y route
