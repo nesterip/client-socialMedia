@@ -40,7 +40,7 @@ const Chat = () => {
     //Agregando al currentUser a los active user el socket
     //y obteniendo todos los active user del socket
     useEffect(() => {
-        const PORT_SOCKET = "https://socket-socialmedia-production.up.railway.app/:8800"
+        const PORT_SOCKET = "https://socket-socialmedia-production.up.railway.app/"
         //conectamos mediante el endpoint del server socket
         socket.current= io(PORT_SOCKET);
 
