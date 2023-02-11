@@ -25,6 +25,7 @@
 
 .profileImg>:nth-child(1){
     width: 100%;
+    object-fit:cover;
 }
 
 .profileImg>:nth-child(2){
