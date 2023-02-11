@@ -1,7 +1,8 @@
 import axios from "axios";
 
+const PORT = "https://server-socialmedia-production-a709.up.railway.app/";
 //conectando con la api mediante axios
-const API = axios.create({baseURL: process.env.PORT});
+const API = axios.create({baseURL: PORT});
 
 //aqui estamos enviando la data del token al authMiddleWare del server
 API.interceptors.request.use((req) => {
