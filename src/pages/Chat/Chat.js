@@ -70,6 +70,7 @@ const Chat = () => {
     useEffect(() => {
         socket.current.on('recieve-message', (data) => {
             setRecieveMessage(data);
+            console.log(data);
         });
     },[]);
 
