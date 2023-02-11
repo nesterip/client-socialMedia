@@ -88,7 +88,7 @@ const ChatBox = ({chat, currentUserId, setSendMessage, recieveMessage, removeCha
         //que aparesca en tiempo real al user con quien
         //chatea el current User
         const receiverId = chat?.members?.find((id) => id !== currentUserId);
-        setSendMessage({...msj, receiverId});
+        setSendMessage({...message, receiverId});
     }
 
     //scroll siempre al final del chat automaticamente
