@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { followUser, unFollowUser } from '../../actions/UserAction.js';
+import { Link } from 'react-router-dom';
 
 const User = ({person}) => {
     
@@ -28,7 +29,7 @@ const User = ({person}) => {
             <div className='follower-top'>
                 <img src={person.profilePicture ? serverPublic + person.profilePicture : serverPublic + "defaultProfile.jpg"} alt="imagen perfil seguidor" className='followerImg'/>
                 <div className="followerName">
-                    <span>{person.firstname}</span>
+                    <span><Link style={{textDecoration: "none", color: "inherit"}} to={`/profile/${person._id}`}>{person.firstname}</Link></span>
                     <span>@{person.username}</span>
                 </div>
             </div>

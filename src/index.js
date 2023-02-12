@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from './store/ReduxStore.js';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {HashRouter, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="*" element= {<App/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById("root")
 );

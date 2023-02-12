@@ -12,16 +12,18 @@ const Post = () => {
 
     //Capturador de parametros
     const params = useParams();
+
+    const userId = params.id;
+    
     //Data currentUser
     const {user} = useSelector((state) => state.authReducer.authData);
 
-    
     //Obteniendo todos los post
     let {posts, loading} = useSelector((state) => state.postReducer);
     
     //Solicitando todos los posts a renderizar
     useEffect(() => {
-        dispatch(getTimeLinePosts(user._id));
+        dispatch(getTimeLinePosts(params.id ? userId : user._id));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -34,9 +36,9 @@ const Post = () => {
 
     return (
     <div className="post">
-        {loading ? "Cargando los posts..." : posts.map((data, id) =>{
+        {loading ? "Cargando los posts..." : posts.map((data) =>{
             return (
-                <PostChild key={id} id={id} data={data}/>
+                <PostChild key={data._id}  data={data}/>
             )
         })}
         

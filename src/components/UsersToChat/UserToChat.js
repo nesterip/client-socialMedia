@@ -26,7 +26,7 @@ const UserToChat = ({addNewChat, setCurrentChat}) => {
 
             {/* UserToChat Body */}
             <div className="userToChat-body">
-                {usersToChat.map((user) => <ToChat key={user} user={user} addNewChat={addNewChat} setCurrentChat={setCurrentChat}/>)}
+                {usersToChat.map((user) => <ToChat key={user._id} user={user} addNewChat={addNewChat} setCurrentChat={setCurrentChat}/>)}
             </div>
         </div>
     )

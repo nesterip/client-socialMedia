@@ -6,7 +6,7 @@ import Like from '../../img/like.png';
 import notLike from '../../img/notlike.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { likePost } from '../../api/PostRequest';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { removePost } from '../../actions/PostAction.js';
 
@@ -15,7 +15,7 @@ const PostChild = ({data}) => {
     const dispatch = useDispatch();
 
     //Capturador de parametros
-    const params = useParams();
+    //const params = useParams();
 
     //DAta currentUser
     const {user} = useSelector((state) => state.authReducer.authData);

@@ -29,10 +29,10 @@ const FollowersCar = () => {
         <div className="followersCard">
             <h3>Personas que podrias conocer</h3>
             
-            {persons.map((person, id) => {
+            {persons.map((person) => {
                 //para que no renderice el current user
                     return(
-                        <User person={person} key={id}/>
+                        <User person={person} key={person._id}/>
                     )
             })}
 
