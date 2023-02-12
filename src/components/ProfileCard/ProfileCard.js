@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './ProfileCard.css';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import * as UserApi from '../../api/UserRequest.js';
 
 //Informacion del user en el HOME
 const ProfileCard = ({what = false}) => {
@@ -32,7 +33,7 @@ const ProfileCard = ({what = false}) => {
             }
         }
         fetchProfileUser();
-    }, [user, profileUserId]);
+    }, [data, profileUserId]);
     
     //datos de los posts del user, para contabilizarlos
     const {posts} = useSelector((state) => state.postReducer);
