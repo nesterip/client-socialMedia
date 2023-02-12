@@ -12,12 +12,12 @@ const ProfileCard = ({what = false}) => {
 
     //id del usuario al cual veremos su perfil
     const profileUserId = params.id;
-
+    console.log(profileUserId, "userid");
     const [profileUser, setProfileUser] = useState({});
 
     //data del currentUser
     const data = useSelector((state) => state.authReducer.authData.user);
-
+console.log(data)
        //Consultando la data del user a renderizar
     useEffect(() => {
         const fetchProfileUser = async() => {
@@ -29,11 +29,13 @@ const ProfileCard = ({what = false}) => {
             else{
                 //obteniendo la data del perfil
                 const profileUser = await UserApi.getUser(profileUserId);
+                console.log("profileUser" + profileUser);
                 setProfileUser(profileUser);
             }
         }
         fetchProfileUser();
-    }, [data, profileUserId]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     
     //datos de los posts del user, para contabilizarlos
     const {posts} = useSelector((state) => state.postReducer);
