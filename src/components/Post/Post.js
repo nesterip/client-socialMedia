@@ -12,8 +12,6 @@ const Post = () => {
 
     //Capturador de parametros
     const params = useParams();
-
-    const userId = params.id;
     
     //Data currentUser
     const {user} = useSelector((state) => state.authReducer.authData);
@@ -23,7 +21,7 @@ const Post = () => {
     
     //Solicitando todos los posts a renderizar
     useEffect(() => {
-        dispatch(getTimeLinePosts(params.id ? userId : user._id));
+        dispatch(getTimeLinePosts(user._id));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
