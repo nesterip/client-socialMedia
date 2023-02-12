@@ -13,7 +13,7 @@ const ProfileCard = ({what = false}) => {
     //id del usuario al cual veremos su perfil
     const profileUserId = params.id;
 
-    const [profileUser, setProfileUser] = useState(null);
+    const [profileUser, setProfileUser] = useState({});
 
     //data del currentUser
     const data = useSelector((state) => state.authReducer.authData.user);
